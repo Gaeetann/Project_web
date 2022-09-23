@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
+@import url(fontawesome-all.min.css);
+
+
+html{
+    box-sizing: border-box;
+}
+
+
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 13pt;
+    font-weight: 300;
+    line-height: 1.5em;
+    background-color: #ffffff;
+}
+
+.image{
+    margin: 0;
+    padding: 0;
+    height: 40vh;
+    width: 100vw;
+}
+
+.image2{
+    margin: 0;
+    padding: 0;
+    height: 30vh;
+    width: 100vw;
+
+}
+
+.titre{
+    display: flex;
+    justify-content: center;
+    justify-content: column;
+    font-family: "Sans", Helvetica, sans-serif;
+    font-size: 2.5rem;
+	font-weight: 300;
+	line-height: 1.2;
+	letter-spacing: -0.05em;
+}
+
+.container{
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+
+}
+
+.descriptif{
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.65;
+    margin: 0 0 2rem 0;
+    font-size: 1.1rem;
+
+}
+
+.style{
+    texte-indent:15px;
+}
+
+
+
+button{
+    padding: 15px 10px 10px 15px;
+    line-height: 20px;
+    border:solid 1px;
+    border-radius:50px;
+    border-color: grey;
+    background-color: transparent;
+    transition : background-color 3s ease-in-out,
+    box-shadow 3s ease-in-out;
+    margin-bottom: 4vh;
+    margin-left:6vw;
+    margin-right:6vw ;
+
+ 
+}
+button:hover{
+    border-color:rgb(71, 197, 184);
+    color: turquoise;
+
+}
+  
+
+
+.slider{
+    display:flex;
+    overflow: hidden;   
+    width : 100vw;
+    height: 50vh;
+}
+
+.slides{
+    display: flex;
+    margin: 0;
+    padding:0;
+    height:50vh;
+    width: 100%;
+    animation-duration: 20s;
+    animation-name: mesImages;
+    animation-iteration-count: infinite;
+}
+
+
+.slide {
+    float: left;
+    height:50vh;
+    width: 100%;
+}
+
+@keyframes mesImages{
+    0%{
+        transform: translateX(0);
+    }
+     9%{
+        transform: translateX(-100%);
+    }
+     18%{
+        transform: translateX(-200%);
+    }
+     27%{
+        transform: translateX(-300%);
+    }
+     36%{
+        transform: translateX(-400%);
+    }
+     45%{
+        transform: translateX(-500%);
+    }
+     54%{
+        transform: translateX(-600%);
+    }
+     63%{
+        transform: translateX(-700%);
+    }
+     72%{
+        transform: translateX(-800%);
+    }
+     81%{
+        transform: translateX(-900%);
+    }
+     90%{
+        transform: translateX(-1000%);
+    }
+     100%{
+        transform: translateX(-1100%);
+    }
+
+
+}
+
+.mama{
+    display: flex;
+    justify-content:center;
+    text-align: center;
+}
+
