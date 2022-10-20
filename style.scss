@@ -1,0 +1,495 @@
+@mixin pad_marg0 {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin place {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin centre {
+    justify-content: center;
+    text-align: center;
+}
+
+$largeur100 : 100vw;
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
+@import url(fontawesome-all.min.css);
+
+
+
+html {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    @include pad_marg0;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 10pt;
+    font-weight: 300;
+    line-height: 1.5em;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+a {
+    color: black;
+}
+
+
+.image {
+    @include pad_marg0;
+    width: $largeur100;
+    height: 50vh;
+}
+
+.image2 {
+    @include pad_marg0;
+    width: $largeur100;
+
+}
+
+.titre {
+    text-align: center;
+}
+
+
+.titre_slider {
+    text-align: center;
+    font-size: 25px
+}
+
+
+.container {
+    @include place;
+    align-content: space-between;
+    text-decoration: none;
+    border-bottom: solid 1px;
+    border-color: rgb(129, 129, 109);
+}
+
+.container_items {
+    @include place;
+    text-decoration: none;
+    border-bottom: solid 1px;
+    border-color: grey;
+}
+
+
+.container_items_center {
+    @include place;
+    text-decoration: none;
+    border-right: solid 1px;
+    border-bottom: solid 1px;
+    border-left: solid 1px;
+    border-color: grey;
+}
+
+
+.descriptif {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.65;
+    margin: 0 2rem;
+    font-size: 15px;
+    text-align: center;
+}
+
+.descriptif_slider {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.65;
+    margin: 0 2rem;
+    text-align: center;
+
+}
+
+
+button {
+    padding: 0 2.5em;
+    height: 3.75em;
+    max-width: 150px;
+    line-height: 20px;
+    border: solid 1px;
+    border-radius: 50px;
+    border-color: grey;
+    background-color: transparent;
+    margin-bottom: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+h2 {
+    font-weight: 300;
+}
+
+.h2_titre {
+    font-size: 23px;
+    letter-spacing: -0.05em;
+}
+
+.h2_titre_1er {
+    font-size: 26px;
+    letter-spacing: -0.05em;
+}
+
+
+
+.w-50 {
+    width: 50%;
+}
+
+.p-2 {
+    padding: 2em;
+}
+
+button:hover {
+    border-color: rgb(71, 197, 184);
+    color: turquoise;
+
+}
+
+.slider {
+    height: 30vh;
+    width: $largeur100;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    width: $largeur100;
+    display: flex;
+    animation-iteration-count: infinite;
+
+}
+
+
+.slide {
+    animation: 20s slide infinite;
+    object-fit: contain;
+}
+
+
+.descriptif_petite_image {
+    margin: 0 80px;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+}
+
+
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    9% {
+        transform: translateX(-100%);
+    }
+
+    18% {
+        transform: translateX(-200%);
+    }
+
+    27% {
+        transform: translateX(-300%);
+    }
+
+    36% {
+        transform: translateX(-400%);
+    }
+
+    45% {
+        transform: translateX(-500%);
+    }
+
+    54% {
+        transform: translateX(-600%);
+    }
+
+    63% {
+        transform: translateX(-700%);
+    }
+
+    72% {
+        transform: translateX(-800%);
+    }
+
+    81% {
+        transform: translateX(-900%);
+    }
+
+    90% {
+        transform: translateX(-1000%);
+    }
+
+    100% {
+        transform: translateX(-1100%);
+    }
+
+
+}
+
+.p_logo {
+    @include place;
+    @include centre;
+    margin: 0 auto;
+}
+
+.round {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+
+.centre {
+    @include centre;
+    display: flex;
+}
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .h2_titre {
+        text-align: left;
+        font-size: 25px;
+        margin-left: 30px;
+    }
+
+    .h2_titre_1er {
+        font-size: 35px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .flex-sm-row-reverse {
+        flex-direction: row-reverse;
+    }
+
+    .flex-sm-row {
+        flex-direction: row;
+        margin: 0px;
+    }
+
+    .container {
+        display: flex;
+        align-content: space-between;
+        text-decoration: none;
+    }
+
+
+    .titre {
+        height: 9vh;
+        font-size: 25px;
+        text-align: inherit;
+        margin: 40px 40px 0 40px;
+    }
+
+
+    .image {
+        @include pad_marg0;
+        width: $largeur100;
+        object-fit: cover;
+        object-position: center;
+        height: 50%
+    }
+
+    .image2 {
+        @include pad_marg0;
+        height: 40vh;
+        width: 50vw;
+        object-fit: cover;
+        object-position: center;
+
+    }
+
+    .slider {
+        margin-top: 80px;
+    }
+
+
+    .titre_slider {
+        text-align: center;
+        padding: 0.5em;
+        font-size: 25px;
+    }
+
+    .descriptif {
+        padding: 0em;
+        margin-left: 30px;
+        text-align: inherit;
+        font-size: 16px;
+    }
+
+    .container_items {
+        flex-direction: inherit;
+        width: 33%;
+        flex-direction: column;
+
+
+    }
+
+
+    .container_items_center {
+        flex-direction: inherit;
+        width: 33%;
+        flex-direction: column;
+
+    }
+
+
+    .container-main {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 50px;
+        -webkit-flex-wrap: wrap;
+    }
+
+
+    .titre_1page {
+        width: auto;
+        height: auto;
+    }
+
+    h2 {
+        margin-top: 30px;
+    }
+
+    .descriptif_slider {
+        text-align: center;
+        font-size: 20px;
+        margin: 0 50px;
+    }
+
+    .button {
+        margin-left: 20px;
+        margin-right: 20vw;
+    }
+
+    .slider {
+        width: $largeur100;
+    }
+
+    .font16 {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (min-width :1100px) {
+    .h2_titre {
+        text-align: left;
+        margin-right: 25vw;
+        font-size: 30px;
+    }
+
+    .descriptif {
+        font-size: 20px;
+    }
+
+    .h2_titre_1er {
+        font-size: 40px;
+        margin-left: 2vw;
+    }
+
+    .descriptif_1page {
+        margin-right: 100px;
+        text-align: left;
+        font-size: 25px;
+    }
+
+    .descriptif_slider {
+        text-align: center;
+        font-size: 20px;
+        margin: 0 100px 70px;
+    }
+
+    .flex-sm-row-reverse {
+        flex-direction: row-reverse;
+    }
+
+
+    .image {
+        @include pad_marg0;
+        height: 100vh;
+        width: 50vw;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .image2 {
+        @include pad_marg0;
+        height: 40vh;
+        width: 35vw;
+        object-fit: cover;
+        object-position: center;
+
+    }
+
+    .titre {
+        font-size: 35px;
+        text-align: inherit;
+        margin-right: 40px;
+        margin-top: 3vh;
+    }
+
+    .flex-sm-row {
+        margin: 0px;
+    }
+
+
+    .button_1er {
+        margin-left: 1vw;
+    }
+
+
+    .titre_1page {
+        margin-left: 80px;
+        font-size: 30px;
+        text-align: left;
+        width: 50vw;
+        margin-top: 25vh;
+    }
+
+
+}
+
+
+
+@media screen and (min-width :1600px) {
+    .image2 {
+        height: 60vh;
+    }
+
+    .h2_titre_1er {
+        margin-left: 5vw;
+        font-size: 60px;
+    }
+
+    .descriptif_1page {
+        font-size: 30px;
+    }
+
+
+    .font-20 {
+        font-size: 20px;
+    }
+
+}
